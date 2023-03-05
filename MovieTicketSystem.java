@@ -6,7 +6,7 @@ public class MovieTicketSystem {
     private ArrayList<Ticket> ticketList;  // 电影票列表
 
     // 构造方法，初始化电影和电影票列表
-    public MovieTicketSystem() {
+    public MovieTicketSystem() throws Exception {
         movieList = new ArrayList<>();
         ticketList = new ArrayList<>();
 
@@ -92,7 +92,7 @@ public class MovieTicketSystem {
         System.out.println("\n--------------------- 销售统计如下 ----------------------------------");
         for (Movie movie : movieList) {
             int soldTickets = movie.getTotalTickets() - movie.getRemainingTickets(); // 卖出的电影票数量
-            int sales = soldTickets * movie.getPrice(); // 卖出的电影票总价值
+            int sales = (int) (soldTickets * movie.getPrice()); // 卖出的电影票总价值
             System.out.println("电影名称：" + movie.getName() + "，场次：" + movie.getPlayTime() +
                     "，售出电影票数量：" + soldTickets + "，电影票总价值：" + sales);
             totalSales += sales;
