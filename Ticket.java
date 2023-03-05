@@ -15,6 +15,9 @@ public class Ticket {
         this.purchaseTime = purchaseTime;
     }
 
+    public Ticket(String name, String playTime, String buyerName, int ticketNum) {
+    }
+
     public Movie getMovie() {
         return movie;
     }
