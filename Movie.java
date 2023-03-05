@@ -5,6 +5,9 @@ public class Movie {
     private String name; // 电影名称
     private Date time; // 播放时间
     private int remainingTickets; // 剩余票数
+    private int price;
+    private String playTime;
+    private int ticketCount;
 
     public Movie(String name, Date time, int remainingTickets) {
         this.name = name;
@@ -43,6 +46,19 @@ public class Movie {
         this.remainingTickets = remainingTickets;
     }
 
+    public String getPlayTime() {
+        return this.playTime;
+    }
+
+    public void sellTicket(int ticketNum) {
+        this.ticketCount++;
+    }
+
+    public double getPrice() {
+        return this.price;
+    }
+
+
     // 重写toString方法，方便输出电影信息
     @Override
     public String toString() {
@@ -50,5 +66,9 @@ public class Movie {
         return "电影：" + name + "\n" +
                 "放映时间：" + sdf.format(time) + "\n" +
                 "余票数量：" + remainingTickets + "\n";
+    }
+
+    public int getTotalTickets() {
+        return 20;
     }
 }
