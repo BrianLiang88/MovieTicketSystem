@@ -66,4 +66,4 @@ public class Ticket {
                 "\n购票张数：" + ticketNum +
                 "\n购票时间：" + purchaseTime + "\n";
     }
-}
+} 
