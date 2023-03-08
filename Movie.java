@@ -71,4 +71,4 @@ public class Movie {
     public int getTotalTickets() {
         return 20;
     }
-}
+} 
