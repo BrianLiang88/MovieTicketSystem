@@ -148,4 +148,10 @@ public class MovieTicketSystem {
             }
         }
     }
+    public static void main(String[] args) throws Exception {
+        // 创建一个新的电影票系统对象
+        MovieTicketSystem ticketSystem = new MovieTicketSystem();
+        // 调用run方法启动电影票系统
+        ticketSystem.run();
+    }
 }
