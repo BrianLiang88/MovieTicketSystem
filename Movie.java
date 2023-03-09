@@ -6,7 +6,7 @@ public class Movie {
     private Date time; // 播放时间
     private int remainingTickets; // 剩余票数
     private int price;
-    private String playTime;
+    private int playTime;
     private int ticketCount;
 
     public Movie(String name, Date time, int remainingTickets) {
@@ -15,11 +15,12 @@ public class Movie {
         this.remainingTickets = remainingTickets;
     }
 
-    public Movie(String name, String timeStr, int remainingTickets) throws Exception {
+    public Movie(String name, String timeStr, int remainingTickets, int playTime) throws Exception {
         this.name = name;
         SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
         this.time = formatter.parse(timeStr);
         this.remainingTickets = remainingTickets;
+        this.playTime = playTime;
     }
 
     public String getName() {
@@ -46,7 +47,7 @@ public class Movie {
         this.remainingTickets = remainingTickets;
     }
 
-    public String getPlayTime() {
+    public int getPlayTime() {
         return this.playTime;
     }
 
@@ -71,4 +72,4 @@ public class Movie {
     public int getTotalTickets() {
         return 20;
     }
-} 
+}
