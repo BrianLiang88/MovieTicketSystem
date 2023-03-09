@@ -11,10 +11,10 @@ public class MovieTicketSystem {
         ticketList = new ArrayList<>();
 
         // 初始化电影列表
-        movieList.add(new Movie("1945", "10:00", 200));
-        movieList.add(new Movie("1945", "15:00", 200));
-        movieList.add(new Movie("2023", "10:00", 200));
-        movieList.add(new Movie("2023", "15:00", 200));
+        movieList.add(new Movie("1945", "10:00", 200, 10));
+        movieList.add(new Movie("1945", "15:00", 200, 10));
+        movieList.add(new Movie("2023", "10:00", 200, 10));
+        movieList.add(new Movie("2023", "15:00", 200, 10));
     }
 
     // 显示主菜单
@@ -149,6 +149,7 @@ public class MovieTicketSystem {
         }
     }
     public static void main(String[] args) throws Exception {
+
         // 创建一个新的电影票系统对象
         MovieTicketSystem ticketSystem = new MovieTicketSystem();
         // 调用run方法启动电影票系统
