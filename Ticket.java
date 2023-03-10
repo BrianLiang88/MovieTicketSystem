@@ -15,7 +15,7 @@ public class Ticket {
         this.purchaseTime = purchaseTime;
     }
 
-    public Ticket(String name, String playTime, String buyerName, int ticketNum) {
+    public Ticket(String name, int playTime, String buyerName, int ticketNum) {
     }
 
     public Movie getMovie() {
@@ -66,4 +66,4 @@ public class Ticket {
                 "\n购票张数：" + ticketNum +
                 "\n购票时间：" + purchaseTime + "\n";
     }
-} 
+}
