@@ -45,7 +45,7 @@ public class MovieTicketSystem {
         System.out.print("电影名称：");
         String movieName = scanner.nextLine();
         System.out.print("场次：");
-        String playTime = scanner.nextLine();
+        int playTime = scanner.nextInt();
         System.out.print("购票人姓名：");
         String buyerName = scanner.nextLine();
         System.out.print("购票张数：");
@@ -54,7 +54,7 @@ public class MovieTicketSystem {
         // 检查电影是否存在
         Movie movie = null;
         for (Movie m : movieList) {
-            if (m.getName().equals(movieName) && m.getPlayTime().equals(playTime)) {
+            if (m.getName().equals(movieName) && m.getPlayTime()==playTime) {
                 movie = m;
                 break;
             }
